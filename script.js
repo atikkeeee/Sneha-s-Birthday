@@ -64,3 +64,25 @@ musicBtn.innerHTML="🎵";
 }
 
 };
+function createConfetti(){
+
+for(let i=0;i<80;i++){
+
+let c=document.createElement("div");
+
+c.className="confetti";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.animationDelay=Math.random()*5+"s";
+
+c.style.background=
+["#ff2d75","#ffffff","#ffd700","#00e5ff","#7cff6b"][Math.floor(Math.random()*5)];
+
+document.body.appendChild(c);
+
+}
+
+}
+
+setTimeout(createConfetti,1000);
