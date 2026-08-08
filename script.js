@@ -20,7 +20,6 @@ function finalSurprise() {
   document.getElementById("homePage").classList.add("hidden");
   document.getElementById("galleryPage").classList.add("hidden");
   document.getElementById("letterPage").classList.add("hidden");
-  document.getElementById("memoryPage").classList.add("hidden");
   document.getElementById("finalPage").classList.remove("hidden");
 }
 
@@ -47,7 +46,6 @@ function backHome() {
   document.getElementById("homePage").classList.remove("hidden");
   document.getElementById("letterPage").classList.add("hidden");
   document.getElementById("galleryPage").classList.add("hidden");
-  document.getElementById("memoryPage").classList.add("hidden");
   document.getElementById("finalPage").classList.add("hidden");
 }
 
