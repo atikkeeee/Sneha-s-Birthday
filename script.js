@@ -41,6 +41,7 @@ function memoryBook() {
 }
 
 function backHome() {
+  document.getElementById("loginPage").classList.add("hidden");
   document.getElementById("homePage").classList.remove("hidden");
   document.getElementById("letterPage").classList.add("hidden");
   document.getElementById("galleryPage").classList.add("hidden");
