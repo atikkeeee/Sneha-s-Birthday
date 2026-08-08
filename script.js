@@ -11,11 +11,16 @@ function login() {
 
 function openLetter() {
   document.getElementById("homePage").classList.add("hidden");
+  document.getElementById("galleryPage").classList.add("hidden");
+  document.getElementById("finalPage").classList.add("hidden");
   document.getElementById("letterPage").classList.remove("hidden");
 }
 
 function finalSurprise() {
+  document.getElementById("homePage").classList.add("hidden");
+  document.getElementById("galleryPage").classList.add("hidden");
   document.getElementById("letterPage").classList.add("hidden");
+  document.getElementById("memoryPage").classList.add("hidden");
   document.getElementById("finalPage").classList.remove("hidden");
 }
 
@@ -30,14 +35,11 @@ const photos = [
 let current = 0;
 
 function gallery() {
+  document.getElementById("homePage").classList.add("hidden");
   document.getElementById("letterPage").classList.add("hidden");
+  document.getElementById("finalPage").classList.add("hidden");
   document.getElementById("galleryPage").classList.remove("hidden");
   document.getElementById("galleryImage").src = photos[current];
-}
-
-function memoryBook() {
-  document.getElementById("letterPage").classList.add("hidden");
-  document.getElementById("memoryPage").classList.remove("hidden");
 }
 
 function backHome() {
