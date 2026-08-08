@@ -97,3 +97,12 @@ function memoryBook(){
 alert("📖 Our Memory Book Coming Soon ❤️");
 
 }
+window.onload=function(){
+
+setTimeout(()=>{
+
+document.getElementById("loading").style.display="none";
+
+},3000);
+
+};
