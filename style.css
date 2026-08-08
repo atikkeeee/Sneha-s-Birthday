@@ -139,8 +139,10 @@ opacity:.35;
 z-index:-1;
 }
 .typing{
-overflow:hidden;
-white-space:nowrap;
+line-height:1.8;
+white-space:normal;
+animation:fade 2s;
+}
 border-right:3px solid #fff;
 width:0;
 animation:typing 5s steps(60,end) forwards,
