@@ -86,3 +86,26 @@ if (music && musicBtn) {
     }
   };
 }
+function yesAnswer() {
+  document.getElementById("answer").innerHTML =
+    "🥹❤️ Yay!! I Love You Forever, My Princess ❤️";
+}
+
+const noBtn = document.getElementById("noBtn");
+
+if (noBtn) {
+
+  function moveNoButton() {
+    noBtn.style.position = "absolute";
+    noBtn.style.left = Math.random() * 70 + "%";
+    noBtn.style.top = Math.random() * 70 + "%";
+  }
+
+  noBtn.addEventListener("mouseenter", moveNoButton);
+
+  noBtn.addEventListener("touchstart", function (e) {
+    e.preventDefault();
+    moveNoButton();
+  });
+
+      }
