@@ -1,108 +1,87 @@
-function login(){
+function login() {
+  const pass = document.getElementById("password").value;
 
-    const pass=document.getElementById("password").value;
+  if (pass === "Snehatik") {
+    document.getElementById("loginPage").classList.add("hidden");
+    document.getElementById("homePage").classList.remove("hidden");
+  } else {
+    alert("Wrong Password ❤️");
+  }
+}
 
-    if(pass==="Snehatik"){
+function openLetter() {
+  document.getElementById("homePage").classList.add("hidden");
+  document.getElementById("letterPage").classList.remove("hidden");
+}
 
-        document.getElementById("loginPage").classList.add("hidden");
-        document.getElementById("homePage").classList.remove("hidden");
+function finalSurprise() {
+  document.getElementById("letterPage").classList.add("hidden");
+  document.getElementById("finalPage").classList.remove("hidden");
+}
 
-    }else{
+const photos = [
+  "images/1.jpg",
+  "images/2.jpg",
+  "images/3.jpg",
+  "images/4.jpg",
+  "images/5.jpg"
+];
 
-        alert("Wrong Password ❤️");
+let current = 0;
 
+function gallery() {
+  document.getElementById("letterPage").classList.add("hidden");
+  document.getElementById("galleryPage").classList.remove("hidden");
+  document.getElementById("galleryImage").src = photos[current];
+}
+
+function memoryBook() {
+  document.getElementById("letterPage").classList.add("hidden");
+  document.getElementById("memoryPage").classList.remove("hidden");
+}
+
+function backHome() {
+  document.getElementById("homePage").classList.remove("hidden");
+  document.getElementById("letterPage").classList.add("hidden");
+  document.getElementById("galleryPage").classList.add("hidden");
+  document.getElementById("memoryPage").classList.add("hidden");
+  document.getElementById("finalPage").classList.add("hidden");
+}
+
+function nextPhoto() {
+  current = (current + 1) % photos.length;
+  document.getElementById("galleryImage").src = photos[current];
+}
+
+function prevPhoto() {
+  current = (current - 1 + photos.length) % photos.length;
+  document.getElementById("galleryImage").src = photos[current];
+}
+
+setInterval(() => {
+  let heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (18 + Math.random() * 25) + "px";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 7000);
+}, 300);
+
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+if (music && musicBtn) {
+  musicBtn.onclick = function () {
+    if (music.paused) {
+      music.play();
+      musicBtn.innerHTML = "🔊";
+    } else {
+      music.pause();
+      musicBtn.innerHTML = "🎵";
     }
-
+  };
 }
-
-function openLetter(){
-
-    document.getElementById("homePage").classList.add("hidden");
-    document.getElementById("letterPage").classList.remove("hidden");
-
-}
-
-function finalSurprise(){
-
-    document.getElementById("letterPage").classList.add("hidden");
-    document.getElementById("finalPage").classList.remove("hidden");
-
-}
-
-setInterval(()=>{
-
-    let heart=document.createElement("div");
-
-    heart.className="heart";
-
-    heart.innerHTML="❤️";
-
-    heart.style.left=Math.random()*100+"vw";
-
-    heart.style.fontSize=(18+Math.random()*25)+"px";
-
-    document.body.appendChild(heart);
-
-    setTimeout(()=>{
-
-        heart.remove();
-
-    },7000);
-
-},300);
-const music=document.getElementById("bgMusic");
-const musicBtn=document.getElementById("musicBtn");
-
-musicBtn.onclick=function(){
-
-if(music.paused){
-music.play();
-musicBtn.innerHTML="🔊";
-}else{
-music.pause();
-musicBtn.innerHTML="🎵";
-}
-
-};
-function createConfetti(){
-
-for(let i=0;i<80;i++){
-
-let c=document.createElement("div");
-
-c.className="confetti";
-
-c.style.left=Math.random()*100+"vw";
-
-c.style.animationDelay=Math.random()*5+"s";
-
-c.style.background=
-["#ff2d75","#ffffff","#ffd700","#00e5ff","#7cff6b"][Math.floor(Math.random()*5)];
-
-document.body.appendChild(c);
-
-}
-
-}
-
-setTimeout(createConfetti,1000);
-function gallery(){
-
-alert("📸 Our Gallery Coming Soon ❤️");
-
-}
-
-function memoryBook(){
-
-alert("📖 Our Memory Book Coming Soon ❤️");
-
-}
-window.onload=function(){
-
-setTimeout(()=>{
-
-document.getElementById("loading").style.display="none";
-
-},3000);
-
-};
