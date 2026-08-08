@@ -85,6 +85,40 @@ if (music && musicBtn) {
       musicBtn.innerHTML = "🎵";
     }
   };
+  function createFireworks() {
+
+  for(let i=0;i<80;i++){
+
+    const fw=document.createElement("div");
+    fw.className="firework";
+
+    fw.style.left="50%";
+    fw.style.top="45%";
+
+    fw.style.background=
+    ["#ff2d75","#ffd700","#00e5ff","#7cff6b","#ffffff"][Math.floor(Math.random()*5)];
+
+    fw.style.setProperty("--x",(Math.random()*500-250)+"px");
+    fw.style.setProperty("--y",(Math.random()*500-250)+"px");
+
+    document.body.appendChild(fw);
+
+    setTimeout(()=>{
+      fw.remove();
+    },1000);
+
+  }
+
+}
+
+function yesAnswer(){
+
+  document.getElementById("answer").innerHTML =
+  "🥹❤️ Yay!! I Love You Forever, My Princess ❤️";
+
+  createFireworks();
+
+}
 }
 function yesAnswer() {
   document.getElementById("answer").innerHTML =
