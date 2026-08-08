@@ -86,3 +86,14 @@ document.body.appendChild(c);
 }
 
 setTimeout(createConfetti,1000);
+function gallery(){
+
+alert("📸 Our Gallery Coming Soon ❤️");
+
+}
+
+function memoryBook(){
+
+alert("📖 Our Memory Book Coming Soon ❤️");
+
+}
