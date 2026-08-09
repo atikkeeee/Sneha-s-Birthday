@@ -141,12 +141,12 @@ z-index:-1;
 .typing{
     line-height:1.8;
     white-space:normal;
-    border-right:3px solid #fff;
-    width:0;
     overflow:hidden;
+    border-right:3px solid #fff;
+    width:100%;
     animation:
-      typing 5s steps(60,end) forwards,
-      blink .8s infinite;
+        typing 5s steps(60,end),
+        blink .8s infinite;
 }
 
 @keyframes typing{
