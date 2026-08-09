@@ -100,6 +100,7 @@ if (music && musicBtn) {
       musicBtn.innerHTML = "🎵";
     }
   };
+}
   function createFireworks() {
 
   for(let i=0;i<80;i++){
