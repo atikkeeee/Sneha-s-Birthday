@@ -126,18 +126,23 @@ if (music && musicBtn) {
 
 }
 
-function yesAnswer(){
+function yesAnswer() {
 
   document.getElementById("answer").innerHTML =
-  "🥹❤️ Yay!! I Love You Forever, My Princess ❤️";
+    "🥹❤️ Yay!! I Love You Forever, My Princess ❤️";
 
   createFireworks();
 
+  document.getElementById("giftSection").classList.remove("hidden");
+
 }
-}
-function yesAnswer() {
-  document.getElementById("answer").innerHTML =
-    "🥹❤️ Yay!! I Love You Forever, My Princess ❤️";
+
+function openGift() {
+
+  document.getElementById("giftSection").classList.add("hidden");
+
+  document.getElementById("downloadSection").classList.remove("hidden");
+
 }
 
 const noBtn = document.getElementById("noBtn");
