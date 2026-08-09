@@ -143,3 +143,60 @@ if (noBtn) {
   });
 
       }
+const canvas=document.getElementById("heartCanvas");
+const ctx=canvas.getContext("2d");
+
+function resize(){
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+}
+resize();
+window.addEventListener("resize",resize);
+
+const particles=[];
+
+for(let i=0;i<900;i++){
+
+let t=Math.random()*Math.PI*2;
+
+let x=16*Math.pow(Math.sin(t),3);
+
+let y=13*Math.cos(t)-5*Math.cos(2*t)-2*Math.cos(3*t)-Math.cos(4*t);
+
+particles.push({
+
+x:x*18,
+y:-y*18,
+size:Math.random()*2+1
+
+});
+
+}
+
+function draw(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+ctx.save();
+
+ctx.translate(canvas.width/2,canvas.height/2);
+
+particles.forEach(p=>{
+
+ctx.beginPath();
+
+ctx.fillStyle="rgba(255,60,120,.8)";
+
+ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+
+ctx.fill();
+
+});
+
+ctx.restore();
+
+requestAnimationFrame(draw);
+
+}
+
+draw();
