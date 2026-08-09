@@ -341,3 +341,46 @@ pointer-events:none;
 z-index:-2;
 opacity:.35;
 }
+#cakePage{
+animation:fadeIn 1s;
+}
+
+#cake{
+font-size:120px;
+animation:cakePop 2s ease;
+}
+
+@keyframes cakePop{
+
+0%{
+transform:scale(0) rotate(-180deg);
+opacity:0;
+}
+
+60%{
+transform:scale(1.2);
+}
+
+100%{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+#cakePage h2{
+
+margin-top:20px;
+font-size:35px;
+color:#ffd700;
+
+animation:glow 1s infinite alternate;
+
+}
+
+#cakePage p{
+
+margin-top:15px;
+font-size:18px;
+
+}
