@@ -1,12 +1,27 @@
 function login() {
-  const pass = document.getElementById("password").value;
 
-  if (pass === "Snehatik") {
-    document.getElementById("loginPage").classList.add("hidden");
-    document.getElementById("homePage").classList.remove("hidden");
-  } else {
-    alert("Wrong Password ❤️");
-  }
+const pass=document.getElementById("password").value;
+
+if(pass==="Snehatik"){
+
+document.getElementById("loginPage").classList.add("hidden");
+
+document.getElementById("cakePage").classList.remove("hidden");
+
+setTimeout(()=>{
+
+document.getElementById("cakePage").classList.add("hidden");
+
+document.getElementById("homePage").classList.remove("hidden");
+
+},5000);
+
+}else{
+
+alert("Wrong Password ❤️");
+
+}
+
 }
 
 function openLetter() {
