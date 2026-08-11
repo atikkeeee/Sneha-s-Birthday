@@ -228,7 +228,7 @@ requestAnimationFrame(draw);
 draw();
 function startCountdown(){
 
-let n=20;
+let n=30;
 
 const c=document.getElementById("countdown");
 c.innerHTML = n;
