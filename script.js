@@ -16,14 +16,6 @@ document.getElementById("treePage").classList.remove("hidden");
 
 },2000);
 
-setTimeout(()=>{
-
-document.getElementById("cakePage").classList.add("hidden");
-
-document.getElementById("homePage").classList.remove("hidden");
-
-},5000);
-
 }else{
 
 alert("Wrong Password ❤️");
@@ -234,14 +226,14 @@ function startCountdown(){
 let n=10;
 
 const c=document.getElementById("countdown");
-
+c.innerHTML = n;
 const timer=setInterval(()=>{
 
 c.innerHTML=n;
 
 n--;
 
-if(n<0){
+if(n<=0){
 
 clearInterval(timer);
 
