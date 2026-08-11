@@ -7,7 +7,15 @@ if(pass==="Snehatik"){
 document.getElementById("loginPage").classList.add("hidden");
 
 document.getElementById("arrowPage").classList.remove("hidden");
+setTimeout(()=>{
 
+document.getElementById("treePage").classList.add("hidden");
+
+document.getElementById("coverPage").classList.remove("hidden");
+
+startCountdown();
+
+},5000);
 setTimeout(()=>{
 
 document.getElementById("arrowPage").classList.add("hidden");
