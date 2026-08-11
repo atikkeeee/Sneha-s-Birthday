@@ -18,16 +18,6 @@ document.getElementById("treePage").classList.remove("hidden");
 
 setTimeout(()=>{
 
-document.getElementById("treePage").classList.add("hidden");
-
-document.getElementById("coverPage").classList.remove("hidden");
-
-startCountdown();
-
-},5000);
-
-setTimeout(()=>{
-
 document.getElementById("cakePage").classList.add("hidden");
 
 document.getElementById("homePage").classList.remove("hidden");
