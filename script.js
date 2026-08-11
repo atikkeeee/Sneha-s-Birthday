@@ -1,28 +1,25 @@
 function login() {
 
-const pass=document.getElementById("password").value;
+const pass = document.getElementById("password").value;
 
 if(pass==="Snehatik"){
 
 document.getElementById("loginPage").classList.add("hidden");
 
 document.getElementById("arrowPage").classList.remove("hidden");
+
+// Arrow → Tree
 setTimeout(()=>{
-
-document.getElementById("treePage").classList.add("hidden");
-
-document.getElementById("coverPage").classList.remove("hidden");
-
-startCountdown();
-
-},5000);
-setTimeout(()=>{
-
 document.getElementById("arrowPage").classList.add("hidden");
-
 document.getElementById("treePage").classList.remove("hidden");
-
 },2000);
+
+// Tree → Cover
+setTimeout(()=>{
+document.getElementById("treePage").classList.add("hidden");
+document.getElementById("coverPage").classList.remove("hidden");
+startCountdown();
+},5000);
 
 }else{
 
