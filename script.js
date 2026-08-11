@@ -6,7 +6,25 @@ if(pass==="Snehatik"){
 
 document.getElementById("loginPage").classList.add("hidden");
 
-document.getElementById("cakePage").classList.remove("hidden");
+document.getElementById("arrowPage").classList.remove("hidden");
+
+setTimeout(()=>{
+
+document.getElementById("arrowPage").classList.add("hidden");
+
+document.getElementById("treePage").classList.remove("hidden");
+
+},2000);
+
+setTimeout(()=>{
+
+document.getElementById("treePage").classList.add("hidden");
+
+document.getElementById("coverPage").classList.remove("hidden");
+
+startCountdown();
+
+},5000);
 
 setTimeout(()=>{
 
@@ -221,3 +239,36 @@ requestAnimationFrame(draw);
 }
 
 draw();
+function startCountdown(){
+
+let n=10;
+
+const c=document.getElementById("countdown");
+
+const timer=setInterval(()=>{
+
+c.innerHTML=n;
+
+n--;
+
+if(n<0){
+
+clearInterval(timer);
+
+document.getElementById("coverPage").classList.add("hidden");
+
+document.getElementById("cakePage").classList.remove("hidden");
+
+setTimeout(()=>{
+
+document.getElementById("cakePage").classList.add("hidden");
+
+document.getElementById("homePage").classList.remove("hidden");
+
+},5000);
+
+}
+
+},1000);
+
+}
