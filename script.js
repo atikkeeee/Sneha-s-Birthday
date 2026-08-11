@@ -234,11 +234,10 @@ const c=document.getElementById("countdown");
 c.innerHTML = n;
 const timer=setInterval(()=>{
 
+n--;
 c.innerHTML=n;
 
-n--;
-
-if(n<=0){
+if(n<0){
 
 clearInterval(timer);
 
